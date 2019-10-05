@@ -6,6 +6,7 @@ import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 
 // Modules
+import { ServiceModule } from "./services/service.module";
 import { PagesModule } from "./pages/pages.module";
 
 // Pages
@@ -15,7 +16,13 @@ import { RegisterComponent } from "./register/register.component";
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent],
-  imports: [BrowserModule, AppRoutingModule, PagesModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    PagesModule,
+    FormsModule,
+    ServiceModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
